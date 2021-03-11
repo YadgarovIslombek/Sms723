@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "600945361105",
+    "firebase_url": "https://sms723-4bd1a-default-rtdb.firebaseio.com",
+    "project_id": "sms723-4bd1a",
+    "storage_bucket": "sms723-4bd1a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:600945361105:android:65567e82c526732a6b45f0",
+        "android_client_info": {
+          "package_name": "com.aid.sms723"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "600945361105-o4eaj38iahm8aq9ubcodohqcl3293b5c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aid.sms723",
+            "certificate_hash": "afe1279f8ad26842211c7e93307275f0549dbb69"
+          }
+        },
+        {
+          "client_id": "600945361105-950fea6ag6fsa60frn9pjcf932r9rc8l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsFdgKKRg8Uihs9DiQBLlpXazBqxMqis4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "600945361105-950fea6ag6fsa60frn9pjcf932r9rc8l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

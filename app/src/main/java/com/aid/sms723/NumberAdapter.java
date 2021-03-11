@@ -16,11 +16,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NumberAdapter extends RecyclerView.Adapter<NumberAdapter.MyViewHolder> {
-    NumberModel[] numberModel;
-
+    ArrayList<Number> modelList = new ArrayList<>();
+    ArrayList<String> stringArrayList = new ArrayList<>();
     Context context;
-    public NumberAdapter(NumberModel[] numberModel) {
-        this.numberModel = numberModel;
+
+    public NumberAdapter(ArrayList<Number> modelList, Context context) {
+        this.modelList.addAll(modelList);
+        this.context = context;
 
     }
 
@@ -33,14 +35,16 @@ public class NumberAdapter extends RecyclerView.Adapter<NumberAdapter.MyViewHold
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        final NumberModel number = numberModel[position];
-        holder.textView.setText(numberModel[position].getNum());
-        Log.d("Xay", String.valueOf(number.getNum()));
+        final Number number = modelList.get(position);
+
+
+        holder.textView.setText(number.getNum_list() + "");
+       Log.d("Xay", String.valueOf(number.getNum_list()) + "");
     }
 
     @Override
     public int getItemCount() {
-        return numberModel.length;
+        return modelList.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder  {
