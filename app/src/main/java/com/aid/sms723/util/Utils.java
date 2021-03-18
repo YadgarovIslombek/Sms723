@@ -1,4 +1,4 @@
-package com.aid.sms723;
+package com.aid.sms723.util;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -14,7 +14,7 @@ public class Utils {
         new AlertDialog.Builder(context)
                 .setTitle(title)
                 .setMessage(message)
-                .setNeutralButton("OK", new DialogInterface.OnClickListener() {
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.cancel();

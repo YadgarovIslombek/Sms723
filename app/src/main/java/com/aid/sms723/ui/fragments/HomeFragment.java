@@ -1,12 +1,4 @@
-package com.aid.sms723;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+package com.aid.sms723.ui.fragments;
 
 import android.Manifest;
 import android.content.Context;
@@ -14,15 +6,38 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.aid.sms723.FileManager;
+import com.aid.sms723.R;
+import com.aid.sms723.adapter.NumberAdapter;
+import com.aid.sms723.model.Number;
+import com.aid.sms723.ui.activitys.MainActivity;
+import com.aid.sms723.util.Utils;
+
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.EventListener;
+import java.util.Objects;
 
-public class MainActivity extends AppCompatActivity {
+import static android.app.Activity.RESULT_OK;
+
+
+public class HomeFragment extends Fragment {
     private String TAG = "MainActivity";
     RecyclerView recyclerView;
     int defaultLimit =7;
@@ -34,54 +49,37 @@ public class MainActivity extends AppCompatActivity {
     TextView textView;
     Button button;
 
+
+    public HomeFragment() {
+        // Required empty public constructor
+    }
+
+
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        textView = findViewById(R.id.text);
-        button = findViewById(R.id.choosefile_btn);
+
+
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        textView = view.findViewById(R.id.text);
+        button = view.findViewById(R.id.choosefile_btn);
         button.setOnClickListener(new EventChooseFile());
 
-      recyclerView = findViewById(R.id.recyclerView);
+        recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-//        NumberAdapter adapter = new NumberAdapter(numberModel);
-//        recyclerView.setHasFixedSize(true);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-//        recyclerView.setAdapter(adapter);
-       // Log.d("List", String.valueOf(numberModel.length));
-       // textView.setText("Jami:  "+String.valueOf(numberModel.length) + " ta Contact");
-
+        return  view;
     }
 
-    public boolean TekshiruvPermission(){
-        if(Build.VERSION.SDK_INT >= 23){
-            //==================Avval ruxsat berilgan bolsa ifni ichiga kiradi Start ==========-//////////
-            if(checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)== PackageManager.PERMISSION_GRANTED){
-                Log.v(TAG,"Ruxsat berilgan uje");
-                new EventChooseFile();
-                return true;
-            }
-            //==================Avval ruxsat berilgan bolsa ifni ichiga kiradi End ==========-//////////
-
-            // ==================================================================================================================//
-
-            //==================Agarda user app ga 1 kirib bekor qilsa Start ==========-//////////
-            else{
-                Log.d(TAG,"Bekor qilindi");
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},2);
-                return false;
-            }
-            //==================Agarda user app ga 1 kirib bekor qilsa End ==========-//////////
-        }else{
-            Log.v(TAG,"Ruxsat berildi");
-            new EventChooseFile();
-            return true;
-        }
-    }
-    //=========================================External storage ochilik faylni tanladi Start=================================//
     private class EventChooseFile implements View.OnClickListener {
 
         @Override
@@ -96,25 +94,22 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-    //=========================================External storage ochilik faylni tanladi End =================================//
-
-    //=========================================External storage Faylni ochib oqimiz Start=================================//
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(resultCode ==RESULT_OK && requestCode == FILE_EXPLORER_CODE){
+        if(resultCode == RESULT_OK && requestCode == FILE_EXPLORER_CODE){
             if(data != null && data.getData() != null){
                 FileManager fileManager = new FileManager();
                 try {
-                    ArrayList<String> numberModellist = fileManager.ReadNumbers(this,data.getData());
+                    ArrayList<String> numberModellist = fileManager.ReadNumbers(Objects.requireNonNull(getContext()),data.getData());
                     if(numberModellist.size() == 0){
-                        Utils.showNeutralAlertDialog(this,"Xatolik",".txt fayl ichidagi malumot o'qishda xatolik");
+                        Utils.showNeutralAlertDialog(getContext(),"Xatolik",".txt fayl ichidagi malumot o'qishda xatolik");
                         //recyler viewni obnovit qilibarish garak yani tozalab!!!!!
                         recyclerView.removeAllViewsInLayout();
                     }else {
                         numberList = fileManager.createFiles(numberModellist, numberModellist.size());
                         Log.d("SizListSize", String.valueOf(numberModellist.size()));
-                        adapter = new NumberAdapter(numberList,this);
+                        adapter = new NumberAdapter(numberList,getContext());
                         recyclerView.setAdapter(adapter);
 
                     }
@@ -138,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG,"Ichki xotira");
                 if(grantResults[0]== PackageManager.PERMISSION_GRANTED){
                     Log.v(TAG,"Ruxsat  "+permissions[0]+ " bo " + grantResults[0]);
-                    new EventChooseFile();
+
                 }
                 //==================Agarda user app ga 1 kirib ruxsat barsa End ==========-//////////
                 else{
@@ -147,4 +142,5 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
+
 }

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Asosiy" />
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/ic_baseline_history_24"
+            android:title="Xabarlar tarixi" />
+        <item
+            android:id="@+id/nav_kabinet"
+            android:icon="@drawable/ic_baseline_account_box_24"
+            android:title="Shahsiy kabinet" />
+        <item
+            android:id="@+id/nav_sozlash"
+            android:icon="@drawable/ic_baseline_attach_money_24"
+            android:title="Sozlash" />
+    </group>
+    <item android:title="Ulashing"
+        android:icon="@drawable/ic_baseline_attach_file_24">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_baseline_share_24"
+                android:title="Do'stlar bilan bo'lishing" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_baseline_send_24"
+                android:title="Biz bilan aloqa" />
+        </menu>
+    </item>
+</menu>

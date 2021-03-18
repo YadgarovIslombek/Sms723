@@ -1,4 +1,4 @@
-package com.aid.sms723;
+package com.aid.sms723.model;
 
 import java.util.ArrayList;
 
@@ -47,7 +47,7 @@ public class Number {
     public int getMaxSize() {
         return this.size;
     }
-     public static Number parse(String num) {
+     public static Number parse(ArrayList<String> num) {
           return new Number(num);
        }
     public String getNum() {

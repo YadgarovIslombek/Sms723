@@ -4,7 +4,8 @@ package com.aid.sms723;
 import android.content.Context;
 import android.net.Uri;
 import android.util.Log;
-import android.widget.Toast;
+
+import com.aid.sms723.model.Number;
 
 import java.io.BufferedReader;
 import java.io.IOException;

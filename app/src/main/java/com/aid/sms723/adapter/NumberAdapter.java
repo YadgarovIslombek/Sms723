@@ -1,4 +1,4 @@
-package com.aid.sms723;
+package com.aid.sms723.adapter;
 
 
 import android.content.Context;
@@ -12,8 +12,11 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.aid.sms723.model.Number;
+import com.aid.sms723.R;
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
-import java.util.List;
 
 public class NumberAdapter extends RecyclerView.Adapter<NumberAdapter.MyViewHolder> {
     ArrayList<Number> modelList = new ArrayList<>();
@@ -36,10 +39,9 @@ public class NumberAdapter extends RecyclerView.Adapter<NumberAdapter.MyViewHold
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         final Number number = modelList.get(position);
-
-
         holder.textView.setText(number.getNum_list() + "");
-       Log.d("Xay", String.valueOf(number.getNum_list()) + "");
+
+        Log.d("Xay", String.valueOf(number.getNum_list()) + "");
     }
 
     @Override
