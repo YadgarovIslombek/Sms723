@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">Sample UI Login &amp; SIgnUp Code</string>
+
+
+    <string name="app_name">Sms Reklama</string>
     <string name="new_account">New Account</string>
     <string name="signup_desc">Start by entering your name and categorie below.</string>
 
@@ -12,5 +14,17 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="navigation_drawer_open" />
     <string name="navigation_drawer_close" />
+    <string name="about_app_content"><![CDATA["-> Sms Reklama ilovasi orqali ko'plab telefon raqamlarga bitta bosish orqali reklama xabarlarini osongina yuborishingiz mumkin, va ushbu platformadan siz butun O'zbekiston bo'yicha yoki VILOYATLAR kesimida xabarlaringizni yuborgan holda mijozlaringizni ko'paytirishingiz va o'z biznesingizni ko'proq insonlarga tanitishingiz mumkin. \n\n -> Faqat o'z viloyatingizga xabarlar yubormoqchi bo'lsangiz shu yerdan viloyatingiz raqamlarining KOD va PREFIKS larini bilib olishingiz kerak. http://old.mitc.uz/ru/prefixes/ \n\n -> Ushbu ilova foydalanuvchi uchun qulay bo'lib siz raqamlarni telefoningiz hotirasidagi .txt fayl orqali yoki o'zingiz tasodifiy raqamlar yaratgan holda xabarlarnigizni yuborishingiz mumkin. \n\n Murojat uchun\n\n "]]>
+        <strong>Email:                      </strong>
+  islam.yadgarov.677@gmail.com\n
+  </string>
+    <string name="smsxabar">Sizning o\'z biznesingiz bormi? unda bu ilova siz uchun marhamat yuklab oling va barchaga o\'z reklama xabaringizni yuboring7h7vyvycycycycycctcycycycycycycyctvyvy</string>
+    <string name="phone_txt">+998 99 357 75 05 ga \n Telegram orqali \n 1. Ro\'yhatdan o\'tgan Gmail pochtangizni \n 2. To\'lovni tasdiqlashingiz uchun chekni \n yuboring</string>
+    <string name="string1">nomli plastik kartaga o\'tkazing va</string>
+    <string name="karta">9860 1001 2443 4281 \n\n YADGAROV ISLOMBEK</string>
+    <string name="to_lovni">To\'lovni</string>
+    <string name="paket_turi">Paket turi</string>
+    <string name="to_lov_summasi">To\'lov summasi</string>
+    <string name="to_lovni_o_tkazdim">To\'lovni o\'tkazdim</string>
 
 </resources>

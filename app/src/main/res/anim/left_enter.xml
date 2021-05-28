@@ -1,0 +1,19 @@
+<!--
+  ~ /**
+  ~  * Created by Yadgarov Islombek on 15.01.21 19:01
+  ~  * Copyright (c) 2021 . All rights reserved.
+  ~  * Last modified 07.01.21 12:53
+  ~  */
+  -->
+
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shareInterpolator="false">
+
+    <translate
+        android:duration="300"
+        android:fromXDelta="-100%"
+        android:fromYDelta="0%"
+        android:toXDelta="0%"
+        android:toYDelta="0%" />
+
+</set>

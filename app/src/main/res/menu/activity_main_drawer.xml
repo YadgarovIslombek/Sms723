@@ -15,10 +15,10 @@
             android:id="@+id/nav_kabinet"
             android:icon="@drawable/ic_baseline_account_box_24"
             android:title="Shahsiy kabinet" />
-        <item
-            android:id="@+id/nav_sozlash"
-            android:icon="@drawable/ic_baseline_attach_money_24"
-            android:title="Sozlash" />
+<!--        <item-->
+<!--            android:id="@+id/nav_sozlash"-->
+<!--            android:icon="@drawable/ic_baseline_attach_money_24"-->
+<!--            android:title="Sozlash" />-->
     </group>
     <item android:title="Ulashing"
         android:icon="@drawable/ic_baseline_attach_file_24">

@@ -11,7 +11,7 @@
     android:id="@+id/footer_text"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/gradientLightBlue"
+    android:background="@drawable/circularbluebordersolid"
     android:gravity="bottom"
     android:orientation="vertical"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
@@ -21,13 +21,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:drawableLeft="@drawable/abc_vector_test"
-        android:drawablePadding="10dp"
+        android:drawablePadding="@dimen/_8sdp"
         android:gravity="center"
         android:fontFamily="@font/proximanovaregular"
-        android:padding="10dp"
+        android:padding="@dimen/_8sdp"
         android:text="Tizimdan chiqish"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="15dp"
+        android:textSize="@dimen/_13sdp"
         android:textStyle="bold" />
 
 

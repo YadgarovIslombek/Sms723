@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".ui.activitys.PaymentActivity">
+
+    <ProgressBar
+        android:id="@+id/progressbarTolov"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/_220sdp"
+        android:indeterminateDrawable="@drawable/progress"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ConfirmPayment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/kod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circularbordersolid"
+            android:gravity="center"
+            android:padding="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/input_kod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:drawableRight="@drawable/ic_baseline_info_24"
+                android:fontFamily="@font/proximanovaregular"
+                android:hint="Kodni kiritish"
+                android:inputType="text"
+                android:textSize="@dimen/_12sdp"
+                app:met_floatingLabel="normal" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_tasdiqCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginLeft="@dimen/_14sdp"
+            android:layout_marginRight="@dimen/_14sdp"
+            android:background="@drawable/circularbluebordersolid"
+            android:fontFamily="@font/proximanovaregular"
+            android:text="Kodni tasdiqlash"
+            android:padding="@dimen/_7sdp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/kod" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Tolov"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <include
+            android:id="@+id/toolbarTolov"
+            layout="@layout/toolbar_bar" />
+
+
+        <TextView
+            android:id="@+id/paket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:fontFamily="@font/proximanovaregular"
+            android:text="@string/paket_turi"
+            android:textColor="#CC000000"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbarTolov" />
+        <TextView
+            android:id="@+id/limitcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:fontFamily="@font/proximanovaregular"
+            android:text="Limit"
+            android:textColor="#CC000000"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paket" />
+
+        <TextView
+            android:id="@+id/summa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/proximanovaregular"
+            android:text="@string/to_lov_summasi"
+            android:textColor="#CC000000"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/limitcount" />
+
+        <TextView
+            android:id="@+id/paketName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:fontFamily="@font/proximanovaregular"
+            android:text="Paket turi"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbarTolov" />
+        <TextView
+            android:id="@+id/limitSell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:fontFamily="@font/proximanovaregular"
+            android:text="5000"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paketName" />
+
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/proximanovaregular"
+            android:text="100 000"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/limitSell" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintTop_toBottomOf="@id/summa" />
+
+        <TextView
+            android:id="@+id/Plastik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:text="@string/to_lovni"
+            android:textIsSelectable="false"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/price" />
+
+        <TextView
+            android:id="@+id/Plastik1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:drawablePadding="@dimen/_3sdp"
+            android:text="@string/karta"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold"
+            android:drawableStart="@drawable/ic_baseline_credit_card_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Plastik" />
+
+        <TextView
+            android:id="@+id/Plastiktxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:text="@string/string1"
+            android:textIsSelectable="false"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Plastik1" />
+
+        <TextView
+            android:id="@+id/phonetxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:text="@string/phone_txt"
+            android:textIsSelectable="false"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Plastiktxt" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:fontFamily="@font/proximanovaregular"
+            android:background="@drawable/circularbluebordersolid"
+            android:text="@string/to_lovni_o_tkazdim"
+            android:layout_marginRight="@dimen/_14sdp"
+            android:layout_marginLeft="@dimen/_14sdp"
+            android:padding="@dimen/_9sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phonetxt"
+            android:textColor="@color/white" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/asosiy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <include
+            android:id="@+id/toolbar121"
+            layout="@layout/toolbar_bar" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:fontFamily="@font/proximanovaregular"
+            android:text="Sizning Limitlaringiz"
+            android:textSize="16sp"
+            android:textColor="#676768"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar121" />
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:src="@drawable/coin1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView" />
+
+        <TextView
+            android:id="@+id/limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:fontFamily="@font/proximanovaregular"
+            android:text="10000"
+            android:textColor="#A6000307"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img" />
+
+        <TextView
+            android:id="@+id/txt11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_28sdp"
+            android:textSize="@dimen/_15sdp"
+            android:fontFamily="@font/proximanovaregular"
+            android:text="Limit sotib olish uchun paketlar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/limit" />
+
+        <ScrollView
+            android:id="@+id/scrool"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_420sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:background="@color/bg_color"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/txt11">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardOddiy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:elevation="@dimen/_6sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_8sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtTExt">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alpha="0.7"
+                        android:background="@android:color/transparent">
+
+                        <TextView
+                            android:id="@+id/txtOddiy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:fontFamily="@font/proximanovaregular"
+                            android:text="Oddiy paket"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_22sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/txt2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_14sdp"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:drawableLeft="@drawable/ic_money_24"
+                            android:drawablePadding="@dimen/_7sdp"
+                            android:fontFamily="@font/proximanovaregular"
+                            android:padding="@dimen/_3sdp"
+                            android:text="Narx"
+                            android:textColor="#070707"
+                            android:textSize="@dimen/_16sdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtTExt" />
+
+                        <TextView
+                            android:id="@+id/txtTExt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_14sdp"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:drawableLeft="@drawable/ic_baseline_local_play_24"
+                            android:drawablePadding="@dimen/_7sdp"
+                            android:fontFamily="@font/proximanovaregular"
+                            android:padding="@dimen/_3sdp"
+                            android:text="Limit"
+                            android:textColor="#070707"
+                            android:textSize="@dimen/_16sdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtOddiy" />
+
+                        <TextView
+                            android:id="@+id/txt3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_14sdp"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:layout_marginBottom="@dimen/_6sdp"
+                            android:drawableLeft="@drawable/ic_baseline_access_time_24"
+                            android:drawablePadding="@dimen/_7sdp"
+                            android:fontFamily="@font/proximanovaregular"
+                            android:padding="@dimen/_3sdp"
+                            android:text="Muddati "
+                            android:textColor="#070707"
+                            android:textSize="18sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txt2" />
+
+                        <TextView
+                            android:id="@+id/limitCountOddiy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:layout_marginEnd="@dimen/_14sdp"
+                            android:fontFamily="@font/proximanovaregular"
+                            android:padding="@dimen/_3sdp"
+                            android:text="5000 ta"
+                            android:textColor="#070707"
+                            android:textSize="@dimen/_16sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtOddiy" />
+
+                        <TextView
+                            android:id="@+id/priceOddiy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:layout_marginEnd="@dimen/_14sdp"
+                            android:fontFamily="@font/proximanovaregular"
+                            android:padding="@dimen/_3sdp"
+                            android:text="59 000 so'm"
+                            android:textColor="#070707"
+                            android:textSize="@dimen/_16sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/limitCountOddiy" />
+
+                        <TextView
+                            android:id="@+id/muddatiOddiy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:layout_marginEnd="@dimen/_14sdp"
+                            android:layout_marginBottom="@dimen/_6sdp"
+                            android:fontFamily="@font/proximanovaregular"
+                            android:padding="@dimen/_3sdp"
+                            android:text="Cheklanmagan"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_16sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/priceOddiy" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardSilver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:elevation="@dimen/_6sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_6sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alpha="0.7"
+                        android:background="@android:color/transparent">
+
+                        <TextView
+                            android:id="@+id/txtSilver"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:fontFamily="@font/proximanovaregular"
+                            android:text="Silver paket"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_22sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/txt4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_14sdp"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:drawableLeft="@drawable/ic_baseline_local_play_24"
+                            android:drawablePadding="@dimen/_8sdp"
+                            android:fontFamily="@font/proximanovaregular"
+                            android:padding="@dimen/_3sdp"
+                            android:text="Limit"
+                            android:textColor="#070707"
+                            android:textSize="@dimen/_16sdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtSilver" />
+
+                        <TextView
+                            android:id="@+id/txt5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_14sdp"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:drawableLeft="@drawable/ic_money_24"
+                            android:drawablePadding="@dimen/_7sdp"
+                            android:fontFamily="@font/proximanovaregular"
+                            android:padding="@dimen/_3sdp"
+                            android:text="Narx"
+                            android:textColor="#070707"
+                            android:textSize="@dimen/_16sdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txt4" />
+
+                        <TextView
+                            android:id="@+id/txt6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_14sdp"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:layout_marginBottom="@dimen/_6sdp"
+                            android:drawableLeft="@drawable/ic_baseline_access_time_24"
+                            android:drawablePadding="@dimen/_7sdp"
+                            android:fontFamily="@font/proximanovaregular"
+                            android:padding="@dimen/_3sdp"
+                            android:text="Muddati "
+                            android:textColor="#070707"
+                            android:textSize="@dimen/_16sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txt5" />
+
+                        <TextView
+                            android:id="@+id/limitCountSilver"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:layout_marginEnd="@dimen/_14sdp"
+                            android:fontFamily="@font/proximanovaregular"
+                            android:padding="@dimen/_3sdp"
+                            android:text="10 000 ta"
+                            android:textColor="#070707"
+                            android:textSize="@dimen/_16sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtSilver" />
+
+                        <TextView
+                            android:id="@+id/priceSilver"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:layout_marginEnd="@dimen/_14sdp"
+                            android:fontFamily="@font/proximanovaregular"
+                            android:padding="@dimen/_3sdp"
+                            android:text="100 000 so'm"
+                            android:textColor="#070707"
+                            android:textSize="@dimen/_16sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/limitCountSilver" />
+
+                        <TextView
+                            android:id="@+id/muddatiSilver"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:layout_marginEnd="@dimen/_14sdp"
+                            android:layout_marginBottom="@dimen/_6sdp"
+                            android:fontFamily="@font/proximanovaregular"
+                            android:padding="@dimen/_3sdp"
+                            android:text="Cheklanmagan"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_16sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/priceSilver" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardGold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:elevation="@dimen/_6sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_6sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtTExt">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alpha="0.7"
+                        android:background="@android:color/transparent">
+
+
+                        <TextView
+                            android:id="@+id/txtGold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:fontFamily="@font/proximanovaregular"
+                            android:text="Gold paket"
+
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_22sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.497"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/txt7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_14sdp"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:drawableLeft="@drawable/ic_baseline_local_play_24"
+                            android:drawablePadding="@dimen/_7sdp"
+                            android:fontFamily="@font/proximanovaregular"
+                            android:padding="@dimen/_3sdp"
+                            android:text="Limit"
+                            android:textColor="#070707"
+                            android:textSize="@dimen/_16sdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtGold">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/txt8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_14sdp"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:drawablePadding="@dimen/_7sdp"
+                            android:fontFamily="@font/proximanovaregular"
+                            android:padding="@dimen/_3sdp"
+                            android:text="Narx"
+                            android:textColor="#070707"
+                            android:textSize="@dimen/_16sdp"
+                            app:drawableLeftCompat="@drawable/ic_money_24"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txt7">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/txt9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_14sdp"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:layout_marginBottom="@dimen/_6sdp"
+                            android:drawableLeft="@drawable/ic_baseline_access_time_24"
+                            android:drawablePadding="@dimen/_7sdp"
+                            android:fontFamily="@font/proximanovaregular"
+                            android:padding="@dimen/_3sdp"
+                            android:text="Muddati "
+                            android:textColor="#070707"
+                            android:textSize="@dimen/_16sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txt8" />
+
+                        <TextView
+                            android:id="@+id/limitGold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:layout_marginEnd="@dimen/_14sdp"
+                            android:fontFamily="@font/proximanovaregular"
+                            android:padding="@dimen/_3sdp"
+                            android:text="25 000 ta"
+                            android:textColor="#070707"
+                            android:textSize="@dimen/_16sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txtGold" />
+
+                        <TextView
+                            android:id="@+id/priceGold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:layout_marginEnd="@dimen/_14sdp"
+                            android:fontFamily="@font/proximanovaregular"
+                            android:padding="@dimen/_3sdp"
+                            android:text="229 000 so'm"
+                            android:textColor="#070707"
+                            android:textSize="@dimen/_16sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/limitGold" />
+
+                        <TextView
+                            android:id="@+id/muddatiGold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:layout_marginEnd="@dimen/_14sdp"
+                            android:layout_marginBottom="@dimen/_6sdp"
+                            android:fontFamily="@font/proximanovaregular"
+                            android:padding="@dimen/_3sdp"
+                            android:text="Cheklanmagan"
+                            android:textColor="#000000"
+                            android:textSize="@dimen/_16sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/priceGold" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/scrool"
+            android:layout_marginLeft="@dimen/_14sdp"
+            android:layout_marginRight="@dimen/_14sdp"
+            android:textColor="@color/gradientLightBlue"
+            android:fontFamily="@font/proximanovaregular"
+            android:alpha="0.3"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:text="Diqqat to'lov hizmati tez orada optimizatsiya qilinadi!" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

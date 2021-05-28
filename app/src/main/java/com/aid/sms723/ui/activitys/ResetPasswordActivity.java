@@ -2,12 +2,15 @@ package com.aid.sms723.ui.activitys;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.aid.sms723.R;
@@ -23,9 +26,10 @@ import com.rengwuxian.materialedittext.MaterialEditText;
 public class ResetPasswordActivity extends AppCompatActivity {
 
     private MaterialEditText inputEmail;
-    private Button btnReset;
+    private AppCompatButton btnReset;
     private FirebaseAuth auth;
     private ProgressBar progressBar;
+    TextView linkLogin;
 
 
     @Override
@@ -34,11 +38,21 @@ public class ResetPasswordActivity extends AppCompatActivity {
         setContentView(R.layout.activity_reset_password);
 
         inputEmail = findViewById(R.id.email);
-        btnReset = (Button) findViewById(R.id.btn_reset_password);
+        btnReset = findViewById(R.id.btn_reset_password);
         progressBar = (ProgressBar) findViewById(R.id.progressbarR);
-
+        linkLogin = findViewById(R.id.link_login);
         auth = FirebaseAuth.getInstance();
-
+        linkLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ResetPasswordActivity.this, LoginActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                overridePendingTransition(R.anim.left_enter, R.anim.right_out);
+                finish();
+            }
+        });
 
         btnReset.setOnClickListener(new View.OnClickListener() {
             @Override

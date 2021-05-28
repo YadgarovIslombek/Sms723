@@ -18,15 +18,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingLeft="24dp"
-            android:paddingTop="26dp"
-            android:paddingRight="24dp">
+            android:paddingLeft="@dimen/_22sdp"
+            android:paddingTop="@dimen/_24sdp"
+            android:paddingRight="@dimen/_22sdp">
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="@dimen/_18sdp"
                 android:orientation="vertical">
 
                 <TextView
@@ -37,18 +37,18 @@
                     android:gravity="center"
                     android:text="Ro'yhatdan o'tish"
                     android:textColor="#3c4b5d"
-                    android:textSize="22sp" />
+                    android:textSize="@dimen/_20sdp" />
 
                 <TextView
                     android:id="@+id/desctxt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="@dimen/_8sdp"
                     android:fontFamily="@font/proximanovaregular"
                     android:gravity="center"
                     android:text="Ro'yhatdan o'ting va ommaviy xabar yuborib \n biznesingizni barchaga bildirish imkoniyatiga\n ega bo'ling!"
                     android:textColor="@color/darkgrey"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/_14sdp" />
 
             </LinearLayout>
 
@@ -63,11 +63,10 @@
                     android:id="@+id/namell"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="@dimen/_18sdp"
                     android:background="@drawable/circularbordersolid"
                     android:gravity="center"
-                    android:padding="18dp">
-
+                    android:padding="@dimen/_14sdp">
                     <com.rengwuxian.materialedittext.MaterialEditText
                         android:id="@+id/input_name"
                         android:layout_width="match_parent"
@@ -77,7 +76,7 @@
                         app:met_floatingLabel="normal"
                         android:hint="Ism"
                         android:inputType="text"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/_12sdp" />
 
                 </LinearLayout>
 
@@ -85,10 +84,10 @@
                     android:id="@+id/emailll"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="@dimen/_18sdp"
                     android:background="@drawable/circularbordersolid"
                     android:gravity="center"
-                    android:padding="18dp">
+                    android:padding="@dimen/_14sdp">
 
                     <com.rengwuxian.materialedittext.MaterialEditText
                         android:id="@+id/input_email"
@@ -99,39 +98,19 @@
                         android:fontFamily="@font/proximanovaregular"
                         android:hint="Email"
                         android:inputType="textEmailAddress"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/_12sdp" />
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/imeill"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/circularbordersolid"
-                    android:gravity="center"
-                    android:padding="18dp">
 
-                    <com.rengwuxian.materialedittext.MaterialEditText
-                        android:id="@+id/input_imei"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:fontFamily="@font/proximanovaregular"
-                        app:met_floatingLabel="normal"
-                        android:hint="imei"
-                        android:enabled="false"
-                        android:textSize="14sp" />
-
-                </LinearLayout>
                 <LinearLayout
                     android:id="@+id/passwordll"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="@dimen/_18sdp"
                     android:background="@drawable/circularbordersolid"
                     android:gravity="center"
-                    android:padding="18dp">
+                    android:padding="@dimen/_14sdp">
 
                     <com.rengwuxian.materialedittext.MaterialEditText
                         android:id="@+id/input_password"
@@ -142,46 +121,45 @@
                         app:met_floatingLabel="normal"
                         android:hint="Parol"
                         android:inputType="textPassword"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/_12sdp" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="15dp"
-                    android:layout_marginTop="20dp"
+                    android:padding="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_18sdp"
                     android:background="@drawable/circularbordersolid"
                     android:id="@+id/phonenumberll"
                     android:gravity="center_vertical">
 
                     <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/uzflaf"/>
-
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:src="@drawable/uzflaf"
+                        android:layout_weight="0.1"/>
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
                         android:background="@drawable/circularbordersolid"
-                        android:padding="3dp"
-                        android:textAlignment="center"
-                        android:gravity="center"
+                        android:padding="@dimen/_2sdp"
                         android:text="+998"
-                        android:layout_marginTop="2dp"
-                        android:textSize="14sp"
-                        android:textColor="@color/darkgrey" />
-
+                        android:layout_weight="0"
+                        android:textAlignment="center"
+                        android:textColor="@color/darkgrey"
+                        android:textSize="@dimen/_10sdp" />
 
                     <com.rengwuxian.materialedittext.MaterialEditText
                         android:id="@+id/input_phonenumber"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Telefon raqam"
-                        android:textSize="14sp"
-                        android:layout_marginLeft="10dp"
+                        android:textSize="@dimen/_12sdp"
+                        android:layout_marginLeft="@dimen/_8sdp"
                         android:maxLength="9"
+                        android:layout_weight="0.8"
                         app:met_floatingLabel="normal"
                         android:background="@drawable/circularbordersolid"
                         android:inputType="phone" />
@@ -190,23 +168,23 @@
                     android:id="@+id/phonenumbertextll"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="1dp"
-                    android:padding="5dp"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:padding="@dimen/_3sdp"
                     android:fontFamily="@font/proximanovaregular"
                     android:textColor="@color/darkgrey"
                     android:text="Diqqat! Kiritilgan raqamga sms tasdiqlash kodi yuborishimiz mumkin."
                     android:textAlignment="center"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/_10sdp" />
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_signup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginBottom="14dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
                     android:background="@drawable/circularbluebordersolid"
                     android:fontFamily="@font/proximanovaregular"
-                    android:padding="16dp"
+                    android:padding="@dimen/_8sdp"
                     android:text="Olg'a"
                     android:textColor="@color/white" />
 
@@ -218,10 +196,10 @@
                 android:id="@+id/link_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp"
+                android:layout_marginBottom="@dimen/_22sdp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:padding="10dp">
+                android:padding="@dimen/_8sdp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -230,7 +208,7 @@
                     android:gravity="center"
                     android:text="Ro'yhatdan o'tganmisiz?"
                     android:textColor="#3c4b5d"
-                    android:textSize="16dip" />
+                    android:textSize="@dimen/_14sdp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -239,14 +217,14 @@
                     android:gravity="center"
                     android:text=" Kirish"
                     android:textColor="#8e9cfe"
-                    android:textSize="16dip" />
+                    android:textSize="@dimen/_14sdp" />
 
             </LinearLayout>
 
         </LinearLayout>
         <ProgressBar
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
             android:id="@+id/progressbarS"
             android:layout_gravity="center"
             android:layout_centerInParent="true"

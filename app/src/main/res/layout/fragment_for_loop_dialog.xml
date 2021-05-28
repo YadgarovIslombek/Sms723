@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/circularbordersolid"
+    android:minWidth="@dimen/_600sdp"
+    android:minHeight="@dimen/_500sdp">
+    <LinearLayout
+        android:id="@+id/consLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressbar11"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:indeterminateDrawable="@drawable/progress"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F1F1F1"
+        android:gravity="right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_1sdp"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/proximanovaregular"
+            android:gravity="center"
+            android:padding="@dimen/_1sdp"
+            android:text="Kiritilgan raqamlarni boshlanish va chegarani kiriting"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imgView"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginEnd="@dimen/_1sdp"
+            android:padding="@dimen/_1sdp"
+            android:src="@drawable/ic_baseline_close_24" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/liner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:src="@drawable/uzflaf" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/kodstrana"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:focusable="false"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/proximanovaregular"
+            android:inputType="none"
+            android:text="+998"
+            android:textAlignment="center" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/kod"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_weight="1"
+            android:imeOptions="actionNext"
+            android:fontFamily="@font/proximanovaregular"
+            android:hint="90"
+            android:maxLength="2"
+            android:textSize="@dimen/_10ssp"
+            android:inputType="number"
+            android:textAlignment="center" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/prefiks"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_weight="1"
+            android:imeOptions="actionNext"
+            android:fontFamily="@font/proximanovaregular"
+            android:hint="000"
+            android:maxLength="3"
+            android:textSize="@dimen/_10ssp"
+            android:inputType="number"
+            android:textAlignment="center" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/startNum"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:clickable="false"
+            android:fontFamily="@font/proximanovaregular"
+            android:hint="0001"
+            android:maxLength="4"
+            android:textSize="@dimen/_10ssp"
+            android:inputType="number"
+            android:imeOptions="actionNext"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_3sdp"
+            android:fontFamily="@font/proximanovaregular"
+            android:padding="@dimen/_8sdp"
+            android:text="dan"
+            android:textAlignment="center" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/endNum"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:imeOptions="actionNext"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/proximanovaregular"
+            android:hint="0050"
+            android:maxLength="4"
+            android:inputType="number"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_3sdp"
+            android:fontFamily="@font/proximanovaregular"
+            android:padding="@dimen/_8sdp"
+            android:text="gacha"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:textSize="@dimen/_8ssp"
+        android:background="@drawable/circularbluebordersolid"
+        android:fontFamily="@font/proximanovaregular"
+        android:padding="@dimen/_8sdp"
+        android:text="Yaratish"
+        android:textColor="#FFFFFF" />
+</LinearLayout>

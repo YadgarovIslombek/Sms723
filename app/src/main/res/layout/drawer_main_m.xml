@@ -14,7 +14,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:openDrawer="start">
+    tools:openDrawer="start"
+    android:background="@color/bg_color">
+
 
     <include
         layout="@layout/appbar_layout"
@@ -54,6 +56,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
+                    android:background="@color/bg_color"
                     android:orientation="vertical" />
 
                 <include layout="@layout/nav_footer"></include>

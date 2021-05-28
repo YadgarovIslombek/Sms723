@@ -1,5 +1,7 @@
 package com.aid.sms723.model;
 
+import android.telephony.SmsManager;
+
 import java.util.ArrayList;
 
 public class Number {
@@ -9,19 +11,26 @@ public class Number {
 
     private ArrayList<String> num_list;
 
+    public Number() {
+    }
+
     public Number(int size) {
            this.num_list = new ArrayList<>(size);
            this.size = size;
-
       }
-
-       public void add(String number) {
+      public void add(String number) {
               if(this.getNum_list().size() < this.getMaxSize()) {
-                  this.num_list.add(number);
+                  this.num_list.add(String.valueOf(number));
               }
 
           }
-
+    // Send message to each phone number of this Batch
+    public void sendMessage(String message) {
+        for (int i = 0; i < this.getNum_list().size(); i++) {
+            SmsManager manager = SmsManager.getDefault();
+            manager.sendTextMessage(this.num_list .get(i), null, message, null, null);
+        }
+    }
 
     public int getLimitSize() {
         return limitSize;

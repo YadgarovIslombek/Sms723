@@ -5,19 +5,28 @@ public class UserData {
     private String userId;
     private String username;
     private String mail;
-    private String imei;
+    private String confirmCod;
     private String password;
     private String phone;
     private String limit;
 
     public UserData() {
     }
+    public UserData(String limit){
+        this.limit = limit;
+    }
 
-    public UserData(String userId, String username, String mail, String imei, String password, String phone, String limit) {
+    public UserData(String mail, String password) {
+        this.username = username;
+        this.mail = mail;
+        this.password = password;
+    }
+
+    public UserData(String userId, String username, String mail, String confirmCod, String password, String phone, String limit) {
         this.userId = userId;
         this.username = username;
         this.mail = mail;
-        this.imei = imei;
+        this.confirmCod = confirmCod;
         this.password = password;
         this.phone = phone;
         this.limit = limit;
@@ -47,12 +56,12 @@ public class UserData {
         this.mail = mail;
     }
 
-    public String getImei() {
-        return imei;
+    public String getconfirmCod() {
+        return confirmCod;
     }
 
-    public void setImei(String imei) {
-        this.imei = imei;
+    public void setconfirmCod(String confirmCod) {
+        this.confirmCod = confirmCod;
     }
 
     public String getPassword() {

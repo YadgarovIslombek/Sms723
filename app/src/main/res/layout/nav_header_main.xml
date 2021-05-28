@@ -2,36 +2,40 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/nav_header"
     android:layout_width="match_parent"
-    android:layout_height="160dp"
-    android:background="@color/colorAccent"
+    android:layout_height="@dimen/_140sdp"
+    android:background="@drawable/main_fragment_bg"
     android:clickable="true"
     android:focusable="true"
     android:foreground="?attr/selectableItemBackgroundBorderless"
     android:gravity="bottom"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="@dimen/_14sdp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
         android:id="@+id/nav_header_imageView"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:src="@mipmap/ic_launcher" />
+        android:layout_width="@dimen/_44sdp"
+        android:layout_height="@dimen/_44sdp"
+        android:src="@drawable/ic_baseline_people_24"
+        />
 
     <TextView
         android:id="@+id/nav_header_textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="16dp"
+        android:paddingTop="@dimen/_14sdp"
+        android:textStyle="bold"
+        android:fontFamily="@font/proximanovaregular"
         android:text="Yadgarov Islombek "
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/white"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
     <TextView
         android:id="@+id/nav_header_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="10dp"
+        android:paddingTop="@dimen/_8sdp"
+        android:fontFamily="@font/proximanovaregular"
         android:text="islam67747@gmail.com"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/white"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 </LinearLayout>

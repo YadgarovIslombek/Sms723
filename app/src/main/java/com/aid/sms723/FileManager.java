@@ -39,7 +39,7 @@ public class FileManager {
                 files.add(file);
             }
 
-            Log.d(TAG, "createBatches: " + files.toString());
+//            Log.d(TAG, "createBatches: " + files.toString());
 
 //        } else {
 //            Log.d("TAG", "VAXAXA");
@@ -56,19 +56,24 @@ public class FileManager {
         while ((line = reader.readLine()) != null) {
             if (line.length() == 13) {
                 lines.add(line);
+
             }
             else{
 
 
             }
+
         }
+
         if (inputStream != null) {
             inputStream.close();
         }
         reader.close();
 
-        Log.d(TAG, "Linelar: " + lines.toString());
+//        Log.d(TAG, "ListLinelar: " + lines.toString());
+
         return lines;
+
     }
 
 

@@ -3,37 +3,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.aid.sms723">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SEND_SMS"  />
+    <uses-permission android:name="android.permission.INTERNET"  />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="Sms723"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@mipmap/ic_icon"
+        android:label="Sms Reklama"
+        android:roundIcon="@mipmap/ic_icon_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true"
-        tools:targetApi="m">
-        <activity android:name=".ui.activitys.StartActivity" />
-        <activity android:name=".ui.activitys.ResetPasswordActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".ui.activitys.PaymentActivity" />
+        <activity android:name=".ui.activitys.InfoActivity" />
+        <activity
+            android:name=".ui.activitys.RaqamyaratActivity"
+            android:windowSoftInputMode="adjustPan" />
+
+        <receiver android:name=".ui.activitys.NetworkChangeReciever">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ui.activitys.TxtFaylActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.activitys.ResetPasswordActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".ui.activitys.LoginActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            >
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".ui.activitys.SignUpActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".ui.activitys.MainActivity" />
+        <activity android:name=".ui.activitys.IntroActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".ui.activitys.SignUpActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".ui.activitys.MainActivity"
-            >
-
         </activity>
     </application>
 

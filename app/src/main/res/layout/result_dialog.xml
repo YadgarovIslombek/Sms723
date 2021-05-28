@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/_1sdp"
+    android:background="@color/bg_color">
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:alpha="0.8"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:padding="@dimen/_6sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+
+        <TextView
+            android:id="@+id/totalFailedCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1222 ta"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtDialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:fontFamily="@font/proximanovaregular"
+        android:text="Hisobot"
+        android:textAppearance="@android:style/TextAppearance.DialogWindowTitle"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_27sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:orientation="vertical"
+
+        android:padding="@dimen/_6sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDialogTitle">
+
+        <TextView
+            android:id="@+id/totalsuccess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_succes"
+            android:drawablePadding="@dimen/_3sdp"
+            android:text="Muvaffaqiyatli"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:alpha="0.8"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:padding="@dimen/_6sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDialogTitle">
+
+        <TextView
+            android:id="@+id/totalsuccessCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1222 ta"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_27sdp"
+
+        android:layout_marginTop="@dimen/_14sdp"
+        android:orientation="vertical"
+        android:padding="@dimen/_6sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+        <TextView
+            android:id="@+id/totalfailed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_e_cancel_schedule_send_24"
+            android:drawablePadding="@dimen/_3sdp"
+            android:text="Xatolik"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circularbluebordersolid"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout6"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:padding="@dimen/_4sdp"
+        android:textSize="@dimen/_8ssp"
+        android:text="Yopish"
+        android:textColor="@color/white"
+        android:fontFamily="@font/proximanovaregular"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

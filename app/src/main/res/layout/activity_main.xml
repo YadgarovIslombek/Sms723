@@ -21,7 +21,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
-
         <include
             layout="@layout/appbar_layout"
             android:layout_width="match_parent"
@@ -61,7 +60,7 @@
                 <LinearLayout
                     android:id="@+id/spacer_to_bottom"
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
+                    android:layout_height="@dimen/_265sdp"
                     android:orientation="vertical"
                     android:background="@color/bg_color"/>
 

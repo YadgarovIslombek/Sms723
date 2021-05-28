@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_120sdp"
+        app:tint="@color/darkgrey"
+        android:src="@drawable/ic_baseline_wifi_off_24"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OOPS!"
+        android:fontFamily="@font/proximanovaregular"
+        android:textStyle="bold"
+        android:textSize="@dimen/_25sdp"
+        android:gravity="center"
+        android:textColor="@color/darkgrey"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/darkgrey"
+        android:textSize="@dimen/_20sdp"
+        android:fontFamily="@font/proximanovaregular"
+        android:text="Tarmoqga ulanishni tekshiring!"
+        android:gravity="center"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Retry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_40sdp"
+        android:textAllCaps="true"
+        android:fontFamily="@font/proximanovaregular"
+        android:text="Takrorlash"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/circularbluebordersolid"/>
+</LinearLayout>

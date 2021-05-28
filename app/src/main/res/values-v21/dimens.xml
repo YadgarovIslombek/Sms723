@@ -1,0 +1,27 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="header_margin">1dp</dimen>
+    <dimen name="margin_16dp">16dp</dimen>
+    <dimen name="popup_width">500dp</dimen>
+    <dimen name="popup_height">350dp</dimen>
+    <dimen name="marginBottomMain">325dp</dimen>
+    <dimen name="marginTop">-85dp</dimen>
+    <dimen name="payLinerWidth">78dp</dimen>
+    <dimen name="payLinerHeight">56dp</dimen>
+    <dimen name="kokLayoutHeight">390dp</dimen>
+    <dimen name="cardVWidht">100dp</dimen>
+    <dimen name="cardVHeight">100dp</dimen>
+    <dimen name="card1MargTop">210dp</dimen>
+    <dimen name="imgV">60dp</dimen>
+    <dimen name="imgVH">60dp</dimen>
+    <dimen name="imgMarginTop">8dp</dimen>
+    <dimen name="layMarTop">8dp</dimen>
+    <dimen name="textSize">10sp</dimen>
+    <dimen name="CardMarTopppp">16dp</dimen>
+    <dimen name="txtmarg">8dp</dimen>
+    <dimen name="txtmainmarBot">4dp</dimen>
+    <dimen name="txtmar2">16dp</dimen>
+</resources>

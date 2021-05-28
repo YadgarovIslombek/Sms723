@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activitys.IntroActivity"
+    android:background="#ffffff">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/screen_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_below="@+id/tv_skip"
+        android:layout_above="@+id/tab_indicator"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_28sdp"
+        android:layout_marginBottom="@dimen/_13sdp"
+        android:background="@drawable/btn_next"
+        android:text="Keyingi"
+        android:textSize="@dimen/_10sdp"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        tools:ignore="RtlHardcoded" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_28sdp"
+        android:layout_marginLeft="@dimen/_28sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:layout_marginRight="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_14sdp"
+        android:layout_alignParentBottom="true"
+        app:tabBackground="@drawable/indicator_selector"
+        tools:ignore="RtlHardcoded" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:visibility="invisible"
+        android:id="@+id/btn_get_started"
+        android:layout_width="@dimen/_123sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginLeft="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:layout_marginRight="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_60sdp"
+        android:background="@drawable/btn_gradient_style"
+        android:text="Olg'a"
+        android:textColor="#fff"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"
+        android:textColor="#2d2d2d"
+        android:id="@+id/tv_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:text="O'tkazib yuborish"
+        android:textAllCaps="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"/>
+
+</RelativeLayout>
